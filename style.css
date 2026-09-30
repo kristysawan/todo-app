@@ -1,0 +1,153 @@
+:root {
+  --pink: #ffb6c1;
+  --pink-dark: #ff8fa3;
+  --pink-light: #fff0f3;
+  --text: #5a4a4d;
+  --danger: #e06060;
+
+  /* spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+}
+
+/* body --> flex container: to center */
+body {
+  font-family: sans-serif;
+  color: var(--text);
+  margin: 0;
+  padding: var(--sp-5) var(--sp-3);
+  background: var(--pink-light);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  flex: 0 1 500px;
+  min-width: 0;
+  background: white;
+  border: 2px solid var(--pink);
+  border-radius: 16px;
+  padding: var(--sp-4);
+}
+
+header h1 {
+  color: var(--pink-dark);
+  margin-top: 0;
+  margin-bottom: var(--sp-4);
+}
+
+#task-form {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+#task-form label {
+  align-self: center;
+  font-size: 14px;
+  color: var(--pink-dark);
+}
+
+#task-input {
+  flex: 1;
+  min-width: 0; /* so it shrinks on phones */
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid var(--pink);
+  border-radius: 6px;
+}
+
+#task-form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background 180ms ease-out;
+}
+
+#task-form button:hover {
+  background: var(--pink-dark);
+}
+
+#error-message {
+  color: var(--danger);
+  margin: 4px 0;
+}
+
+#task-list {
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: white;
+  border: 1px solid var(--pink-light);
+  border-left: 4px solid var(--pink);
+  border-radius: 8px;
+  transition: transform 180ms ease-out;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex: 1;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid var(--pink);
+  border-radius: 4px;
+  background: white;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  transition: background 180ms ease-out;
+}
+
+.task-title {
+  flex: 1;
+}
+
+.done {
+  background: var(--pink-light);
+  border-left-color: gray;
+}
+
+.done .checkbox {
+  background: var(--pink-dark);
+  border-color: var(--pink-dark);
+}
+
+.done .task-title {
+  color: gray;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  transition: background 180ms ease-out;
+}
+
+.delete-btn:hover {
+  background: #c0405e;
+}
